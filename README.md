@@ -1,4 +1,4 @@
-portfolio
-=========
+skills
+======
 
-My personal portfolio
+My personal potfolio website.
