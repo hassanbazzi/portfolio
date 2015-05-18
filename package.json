@@ -30,6 +30,7 @@
     "tiny-lr": "^0.1.4"
   },
   "devDependencies": {
+    "gulp-webserver": "^0.9.1",
     "karma": "^0.12.28"
   },
   "repository": {

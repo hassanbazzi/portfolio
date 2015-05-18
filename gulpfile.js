@@ -8,7 +8,8 @@ concat = require('gulp-concat'),
 notify = require('gulp-notify'),
 uglify = require('gulp-uglify'),
 sourcemaps = require('gulp-sourcemaps'),
-livereload = require('gulp-livereload');
+livereload = require('gulp-livereload'),
+webserver = require('gulp-webserver');
 gulp.task('styles', function() {
 
 	return gulp.src('_resources/scss/app.scss')
@@ -51,4 +52,15 @@ gulp.task('watch', function() {
 	watcher.on('change', function(event) {
 		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
 	});
+});
+gulp.task('server', function() {
+  gulp.src('./')
+    .pipe(webserver({
+      port: 8080,
+      host: 'localhost',
+      fallback: 'index.html',
+      livereload: true,
+      open: true
+    }))
+  ;
 });
