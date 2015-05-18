@@ -739,6 +739,9 @@ header nav ul li a:hover { background: #383838; color: #0078a0; }
 header nav ul li a.active { color: #0078a0; }
 
 section.content { background: #fff; padding: 3rem 0; position: relative; }
+section.content .center-contents { text-align: center; }
+section.content .but, body[state=contact] section.content form input[type=submit] { width: 100%; max-width: 301px; background: #0078a0; border: 1px solid #00526d; color: #fff; text-transform: uppercase; padding: 1rem; font-weight: 600; margin-top: .75rem; }
+section.content .but.expand, body[state=contact] section.content form input.expand[type=submit] { display: inline-block; max-width: none; width: auto; margin: 2rem 0; }
 
 body[state=home] section.content img.portrait { border-radius: 50%; margin: 0 auto; display: block; }
 body[state=home] section.content h2 { margin-top: 2rem; color: #262626; }
@@ -773,13 +776,19 @@ footer article ul { margin: 0; }
 footer article ul li { color: #fff; font-weight: 300; list-style: none; line-height: 2; }
 footer article ul li b { font-weight: 600; }
 
+body[state=contact] section.content p { text-align: center; }
 body[state=contact] section.content h4 { text-align: center; }
 body[state=contact] section.content form { margin-top: 2rem; }
 body[state=contact] section.content form label { font-size: 1.2rem; margin-bottom: .5rem; }
 body[state=contact] section.content form input { font-size: 1.3rem; }
 body[state=contact] section.content form textarea { font-size: 1.3rem; min-height: 20%; }
-body[state=contact] section.content form input[type=submit] { width: 100%; max-width: 301px; background: #0078a0; border: 1px solid #00526d; color: #fff; text-transform: uppercase; padding: 1rem; font-weight: 600; margin-top: .75rem; }
 body[state=contact] section.content form .ng-invalid:not(.ng-untouched) { background: rgba(255, 0, 0, 0.26); }
+
+body[state=equisolve] ul.equinews { list-style: none; margin: 0; }
+body[state=equisolve] ul.equinews li { padding: 1rem; overflow: auto; }
+body[state=equisolve] ul.equinews li:nth-child(odd) { background: #0078a0; color: #fff; }
+body[state=equisolve] ul.equinews li span.title { float: left; width: 80%; padding-right: 5%; }
+body[state=equisolve] ul.equinews li span.date { float: right; width: 20%; }
 
 @media only screen and (max-width: 40em) { .small-12:not(:first-child) { margin-top: 2rem; } }
 [ui-view].ng-enter, [ui-view].ng-leave { -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }

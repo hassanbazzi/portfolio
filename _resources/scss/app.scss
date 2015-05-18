@@ -53,6 +53,26 @@ section.content {
 	background:#fff;
 	padding:3rem 0;
 	position:relative;
+	.center-contents {
+		text-align:center;
+	}
+	.but {
+		width:100%;
+		max-width:301px;
+		background:$alternate;
+		border: 1px solid darken($alternate, 10%);
+		color:#fff;
+		text-transform:uppercase;
+		padding:1rem;
+		font-weight:600;
+		margin-top:.75rem;
+		&.expand {
+			display:inline-block;
+			max-width:none;
+			width:auto;
+			margin:2rem 0;
+		}
+	}
 }
 body[state=home] {
 	section.content {
@@ -181,6 +201,9 @@ footer {
 }
 body[state=contact]{
 	section.content {
+		p {
+			text-align:center;
+		}
 		h4 {
 			text-align:center;
 		}
@@ -198,20 +221,35 @@ body[state=contact]{
 				min-height:20%;
 			}
 			input[type=submit]{
-				width:100%;
-				max-width:301px;
-				background:$alternate;
-				border: 1px solid darken($alternate, 10%);
-				color:#fff;
-				text-transform:uppercase;
-				padding:1rem;
-				font-weight:600;
-				margin-top:.75rem;
+				@extend .but;
 			}
 			.ng-invalid:not(.ng-untouched) {
 				background:rgba(255, 0, 0, 0.26);
 			}
 		}
+	}
+}
+body[state=equisolve]{
+	ul.equinews {
+		list-style:none;
+		margin:0;
+		li {
+			padding:1rem;
+			overflow:auto;
+			&:nth-child(odd){
+				background:$alternate;
+				color:#fff;
+			}
+			span.title {
+				float:left;
+				width:80%;
+				padding-right:5%;
+			}
+			span.date {
+				float:right;
+				width:20%;
+			}
+		} 
 	}
 }
 @media only screen and (max-width: 40em){

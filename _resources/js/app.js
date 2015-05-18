@@ -21,6 +21,16 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     	templateUrl: "partials/portfolio.html",
     	controller: 'portfolioCtrl'
     })
+    .state('equisolve', {
+    	url: "/equisolve",
+    	templateUrl: "partials/equisolve.html",
+    	controller: 'equisolveCtrl'
+    })
+    .state('json', {
+      url: "/json",
+      templateUrl: "partials/json.html",
+      controller: 'jsonCtrl'
+    })
     .state('contact', {
       url: "/contact",
       templateUrl: "partials/contact.html",
