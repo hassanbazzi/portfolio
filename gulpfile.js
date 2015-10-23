@@ -56,7 +56,7 @@ gulp.task('watch', function() {
 gulp.task('server', function() {
   gulp.src('./')
     .pipe(webserver({
-      port: 8080,
+      port: 8081,
       host: 'localhost',
       fallback: 'index.html',
       livereload: true,

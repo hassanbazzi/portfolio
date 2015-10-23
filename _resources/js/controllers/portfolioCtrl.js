@@ -1,6 +1,20 @@
 app.controller('portfolioCtrl', ['$scope', function($scope){
 	$scope.portfolio = [
 		{
+			name: "Townsquared",
+			description: "Part of the core Townsquared engineering team as a front-end developer",
+			image: "_resources/img/logos/tsqd.png",
+			imageClass: "lightest",
+			url: "http://townsquared.com"
+		},
+		{
+			name: "La Shish",
+			description: "Developed a simple, yet effective and fully custom website for La Shish.",
+			image: "_resources/img/logos/lashish.png",
+			imageClass: "lightest",
+			url: "http://lashishrestaurant.com"
+		},
+		{
 			name: "Truengage",
 			description: "Developed a demo page that showcased all Truengage products",
 			image: "_resources/img/logos/ayah_logo.png",
