@@ -8,36 +8,27 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('home', {
     	url: "/",
-    	templateUrl: "partials/home.html",
-      controller: 'mainCtrl',
+    	templateUrl: "partials/home.html"
     })
     .state('skills', {
     	url: "/skills",
-    	templateUrl: "partials/skills.html",
-    	controller: 'mainCtrl'
+    	templateUrl: "partials/skills.html"
     })
     .state('portfolio', {
     	url: "/portfolio",
     	templateUrl: "partials/portfolio.html",
     	controller: 'portfolioCtrl'
     })
-    .state('equisolve', {
-    	url: "/equisolve",
-    	templateUrl: "partials/equisolve.html",
-    	controller: 'equisolveCtrl'
-    })
-    .state('json', {
-      url: "/json",
-      templateUrl: "partials/json.html",
-      controller: 'jsonCtrl'
-    })
     .state('contact', {
       url: "/contact",
-      templateUrl: "partials/contact.html",
-      controller: 'contactCtrl'
+      templateUrl: "partials/contact.html"
     });
     $locationProvider.html5Mode(true);
 });
 app.run(function($rootScope, $state) {
     $rootScope.$state = $state;
+    if(location.protocol == 'https:' && navigator.serviceWorker){
+      let sw = navigator.serviceWorker;
+      sw.register('/sw.js');
+    }
 });

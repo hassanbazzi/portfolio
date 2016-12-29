@@ -89,7 +89,7 @@ body[state=home] {
 			}
 		}
 	}
-		
+
 }
 body[state=skills] {
 	section.content {
@@ -197,59 +197,6 @@ footer {
 				}
 			}
 		}
-	}
-}
-body[state=contact]{
-	section.content {
-		p {
-			text-align:center;
-		}
-		h4 {
-			text-align:center;
-		}
-		form {
-			margin-top:2rem;
-			label {
-				font-size:1.2rem;
-				margin-bottom:.5rem;
-			}
-			input {
-				font-size:1.3rem;
-			}
-			textarea {
-				font-size:1.3rem;
-				min-height:20%;
-			}
-			input[type=submit]{
-				@extend .but;
-			}
-			.ng-invalid:not(.ng-untouched) {
-				background:rgba(255, 0, 0, 0.26);
-			}
-		}
-	}
-}
-body[state=equisolve]{
-	ul.equinews {
-		list-style:none;
-		margin:0;
-		li {
-			padding:1rem;
-			overflow:auto;
-			&:nth-child(odd){
-				background:$alternate;
-				color:#fff;
-			}
-			span.title {
-				float:left;
-				width:80%;
-				padding-right:5%;
-			}
-			span.date {
-				float:right;
-				width:20%;
-			}
-		} 
 	}
 }
 @media only screen and (max-width: 40em){

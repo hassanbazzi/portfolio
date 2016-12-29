@@ -1,6 +1,6 @@
 // Initialize Gulp
 var gulp = require('gulp'),
-sass = require('gulp-ruby-sass'),
+sass = require('gulp-sass'),
 autoprefixer = require('gulp-autoprefixer'),
 minifycss = require('gulp-minify-css'),
 rename = require('gulp-rename'),
@@ -10,6 +10,7 @@ uglify = require('gulp-uglify'),
 sourcemaps = require('gulp-sourcemaps'),
 livereload = require('gulp-livereload'),
 webserver = require('gulp-webserver');
+gulp.task('default', ['styles','scripts','html']);
 gulp.task('styles', function() {
 
 	return gulp.src('_resources/scss/app.scss')
